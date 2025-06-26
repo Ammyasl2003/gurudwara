@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSS TRUST CHD</title>
+  <link rel="icon" href="{{ url_for('static', filename='media/logo.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/stylesheet/style.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,600,700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav-bar flex header-container">
+    <a class="logo" href="{{ url_for('index') }}">
+      <img class="first-logo" src="{{ url_for('static', filename='media/logo.png') }}" alt="logo-image">
+      <img class="second-logo" src="{{ url_for('static', filename='media/logo.png') }}" alt="logo-image">
+    </a>
+    <label for="toggle" class="ham">&#9776;</label>
+    <input type="checkbox" id="toggle" class="toggle">
+    <ul class="nav-links flex" style="margin-right: 10%; margin-top: 3%;">
+      <li><a href="{{ url_for('index') }}">HOME</a></li>
+      <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+      <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
+      <li><a href="{{ url_for('team') }}">MEMBERS</a></li>
+      <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page content goes here -->
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <p>Copyright © 2024 By Ammy Singh</p>
+  </footer>
+
+  <!-- Optional Scripts -->
+  <script src="https://kit.fontawesome.com/f4ce9ea80b.js" crossorigin="anonymous"></script>
+</body>
+</html>

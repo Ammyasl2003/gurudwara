@@ -1,0 +1,33 @@
+
+{% block content %}
+<section class="sewa-section padding" style="text-align: center; background-color: #f8f8f8;">
+  <h2 style="color: #d11a2a; margin-top: 40px;">Support GSS Trust - Donate for Sewa</h2>
+  <p style="font-size: 1.2rem; color: #333;">
+    You can contribute for Daswandh, Langar Sewa, Building Fund or any specific cause.
+  </p>
+
+  <!-- QR Code -->
+  <div style="margin-top: 30px;">
+    <img src="{{ url_for('static', filename='qr.jpg') }}" alt="Donate QR" style="max-width: 250px; border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+    <p style="margin-top: 10px;">Scan the QR above using Google Pay, PhonePe or Paytm</p>
+  </div>
+
+  <!-- Payment Details -->
+  <!-- <div style="margin-top: 40px;">
+    <h3 style="color: #005c9b;">Bank Transfer Details</h3>
+    <p>Account Name: Gurudwara Sant Sewa Trust</p>
+    <p>Account No: 1234567890</p>
+    <p>IFSC: PUNB0123456</p>
+    <p>Bank: Punjab National Bank, Chandigarh</p> -->
+  </div>
+
+  <!-- UPI ID -->
+  <div style="margin-top: 30px;">
+    <!-- <h3 style="color: #005c9b;">UPI ID: <span style="font-weight: bold;">gsstrust@upi</span></h3> -->
+  </div>
+
+  <div style="margin-top: 50px;">
+    <p style="font-size: 0.9rem;">For any queries, contact +91 6239001726 or email at gsstrustchd@gmail.com</p>
+  </div>
+</section>
+{% endblock %}

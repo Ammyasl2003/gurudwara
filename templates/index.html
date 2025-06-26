@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" content="user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Title -->
+  <title>GSS TRUST CHD</title>
+  <!-- Website Icon-->
+  <link rel="icon" href="static/media/logo.png"/>
+  <!-- CSS LINK  -->
+  <link rel="stylesheet" href="static/assets/stylesheet/style.css">
+  <!-- Font-Family -->
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,600,700,900&display=swap" rel="stylesheet"><body>
+  <!-- Header Section  -->
+  <header class="header">
+   <nav class="nav-bar flex header-container">
+  <a class="logo" href="{{ url_for('index') }}">
+    <img class="first-logo" src="{{ url_for('static', filename='media/logo.png') }}" alt="logo-image">
+    <img class="second-logo" src="{{ url_for('static', filename='media/logo.png') }}" alt="logo-image">
+  </a>
+  <label for="toggle" class="ham">&#9776;</label>
+  <input type="checkbox" id="toggle" class="toggle">
+  <ul class="nav-links flex" style="margin-right: 10%; margin-top: 3%;">
+    <li><a href="{{ url_for('index') }}">HOME</a></li>
+    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+    <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
+    <li><a href="{{ url_for('team') }}">MEMBERS</a></li>
+    <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+    
+  </ul>
+</nav>
+
+  </header>
+  <main>
+    <section class="hero-section">
+      <div class="hero-banner index-hero-img" style="background-image: url(static/media/img4.jpg);">
+        <div class="hero-content text-center">
+          <h2 class="first-hero-heading" style="color: orange;text-shadow: red 3px 4px 3px;">GURUDWARA SANT SEWA REGD. TRUST</h2>
+          <h2 class="second-hero-heading" style="color: navy;">CHANDIGARH</h2>
+          <p>
+            
+          </p>
+          <button class="btn donate-btn"><a href="{{ url_for('donate') }}">Donate Now</a></button>
+          <button class="btn join-us-btn"><a href="{{ url_for('about') }}">Known More</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section padding" style="text-align: center;">
+  <h2 style="color: navy;">Upcoming Events</h2>
+  <div class="event-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+    {% for event in events %}
+    <div class="event-card" style="border: 1px solid #ccc; padding: 15px; width: 250px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='uploads/' ~ event.image) }}" style="width: 100%; height: 180px; object-fit: cover;" alt="{{ event.name }}">
+      <h3 style="margin-top: 10px;">{{ event.name }}</h3>
+      <p style="color: gray;">{{ event.date }}</p>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+
+
+    <section class="box-section">
+      <div class="box-grid">
+        <div class="col col-1">
+          <h3>REGULAR PROGRAMMES</h3>
+          <p>
+          MORNING<BR>
+            Prakash Sewa - 4:30 AM<br>
+            Nitnem Path - 5:00 To 6:15 AM<br>
+            Asa Di Vaar - 6:15 To 7:00 AM<br>
+            EVENING<BR>
+                Rehras Sahib - 6:30 To 7:00 PM<br>
+                Kirtan - 7:00 To 7:45 PM<br>
+                Samapati - 7:50 PM 
+          </p>
+          
+        </div>
+        <div class="col col-2">
+          <h3>KIRTAN CLASSES</h3><br>
+          <p>
+            Bhai Puran Singh will be holding Kirtan Classes at GSS Gurdwara Sahib.
+            <br><br>
+
+            TUE | THU | SAT <BR>
+                <br>
+                TIMINGS : 4:30 PM To 5:30 PM
+                <br><br>
+                GURBANI CLASSES also hold by Granthi Ji if any interested.
+
+          </p>
+        
+        </div>
+        <div class="col col-3">
+          <h3>BHETA SCHEDULE</h3>
+        <p style="font-size: 1.4rem;font-family: sans-serif;"> 
+            <br> Sri Akhand Path Sahib - 8100<br>
+          Sri Sehaj Path Sahib - 8100<br>
+          Sri Sukhmani Sahib - 3100<br>
+          Kirtan - 2100<br>
+          Langar Sewa (SANGRAND) - 7100<br>
+      
+            
+          </p>
+          
+        </div>
+      </div>
+    </section>
+   
+
+    <section class="become-volunteer-sec">
+      <div class="volunteer-row text-center padding" style="background-color: seashell;">
+        <h2 style="color: red;">Become a Member</h2>
+        <p style="color: navy;">
+            WHATSAPP GROUP
+        </p>
+        <button class="btn join-us-btn"><a href="https://chat.whatsapp.com/JGDRbXXrxLUDqCwwyXXANi">Join Us</a></button>
+      </div>
+    </section>
+
+
+    <section class="main-footer">
+      <div class="main-footer-row padding">
+        <div class="col mission-col" style="margin-left:  0%;width: 100%;">
+          <h3>Our Misson</h3>
+<p>
+    Our goal is to provide a haven in which the community can gather for wholesome social interactions to ultimately promote the Sikh religion. In all aspects of Sikhism including: teaching, language, music, and the philosophies of The Sikh Gurus.
+
+ <a href="{{ url_for('add_event') }}" style="color: yellow;font-size: 2rem;">Event-Add</a>
+</p>
+</div>
+       
+     
+        <div class="col" style="margin-left: 0%;">
+          <h3>Contact Us</h3>
+          <div class="flex contact-footer">
+            <div>
+              
+            </div>
+            <div class="contact-text" >
+              <h4 style="margin-left: 25%;">Head Office</h4>
+              <h5 style="margin-left: 23%;">CHANDIGARH </h5>
+              <h4 style="margin-left: 25%;margin-top: 10%;">CONTACT</h4>
+              <h5 style="margin-left: 18%;font-size: 1.5rem;">+91 6239001726 </h5>
+             
+            </div>
+            
+          </div>
+</div>
+          
+      
+          <div class="cont" style="margin-top: 10%;margin-left: 20%;">
+            <H4 style="color:rgb(24, 209, 18);margin-left: 25%;">E MAIL</H4>
+            <h5 style="margin-left: 10%;">gsstrustchd@gmail.com</h5>
+          </div>    
+    </section>
+
+  </main>
+  <footer class="footer text-center">
+    <p>Copyright  © 2024 By Ammy Singh
+    </p>
+  </footer>
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/f4ce9ea80b.js" crossorigin="anonymous"></script>       

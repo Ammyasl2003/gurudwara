@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" content="user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Title -->
+  <title>GSS TRUST CHD</title>
+  <!-- Website Icon-->
+  <link rel="icon" href="static/assets/media/logored.png"/>
+  <!-- CSS LINK  -->
+  <link rel="stylesheet" href="static/assets/stylesheet/style.css">
+  <!-- Font-Family -->
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,600,700,900&display=swap" rel="stylesheet"><body>
+  <!-- Header Section  -->
+  <header class="header">
+    <nav class="nav-bar flex header-container">
+  <a class="logo" href="{{ url_for('index') }}">
+    <img class="first-logo" src="{{ url_for('static', filename='media/logo.png') }}" alt="logo-image">
+    <img class="second-logo" src="{{ url_for('static', filename='media/logo.png') }}" alt="logo-image">
+  </a>
+  <label for="toggle" class="ham">&#9776;</label>
+  <input type="checkbox" id="toggle" class="toggle">
+  <ul class="nav-links flex" style="margin-right: 10%; margin-top: 3%;">
+    <li><a href="{{ url_for('index') }}">HOME</a></li>
+    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+    <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
+    <li><a href="{{ url_for('team') }}">MEMBERS</a></li>
+    <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+  </ul>
+</nav>
+  </header>
+  <main>
+    <section class="hero-section">
+      <div class="hero-banner contact-hero-img " style="background-image: url(static/media/img4.jpg);">
+        <div class="hero-content text-center">
+          <h2 class="second-hero-heading" style="color: orange;text-shadow: red 3px 4px 3px;">Contact Us</h2>
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </section>    <!-- social-links-section  -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-links padding">
+          <div class="left-contact res-padding">
+            <div class="location back-circle ">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="address address-info">
+              <p> CHANDIGARH <br />
+               160022</p>
+            </div>
+          </div>
+          <div class="center-contact res-padding">
+            <div class="location back-circle ">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <div class="contact-no address-info">
+              <p>info@gmail.com</p>
+              <p>gsstrustchd@gmail.com</p>
+            </div>
+          </div>
+          <div class="right-contact res-padding">
+            <div class="location back-circle ">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="email-address address-info">
+              <p>+91 6239001726</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact-form-section  -->
+    <section class="contact-section">
+      <div class="outer-container">
+        <div class="form-container">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-us">
+
+            <input type="hidden" name="access_key" value="2597196b-5fa3-446a-988c-e84fd6f017ce">
+            <h4 class="form-heading">leave a reply</h4>
+            <div class="form-box">
+              <div class="form-width">
+                <input type="text" name="name" value="" placeholder="name" class="placeholder-fix">
+                <input type="text" value="" placeholder="last name" class="placeholder-fix">
+              </div>
+              <div class="form-width">
+                <input type="email" name="email" value="" placeholder="email" class="placeholder-fix">
+                <input type="tel" name="mobile" value="" placeholder="phone" class="placeholder-fix">
+              </div>
+              <div  class="form-width">
+                <textarea name="message" id="" placeholder="message" class="placeholder-fix" style="color: white;"></textarea>
+              </div>
+              <div class="form-btn">
+                <button type="submit" class="btn" id="order">submit now<i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="map-container">
+          <div class="map">
+            <iframe class="map"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.169746660664!2d76.75160153105952!3d30.723556700484306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc94d07571f%3A0x3956de2ff56d4403!2sGurudwara!5e0!3m2!1sen!2sin!4v1715148439367!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="800" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main-footer">
+      <div class="main-footer-row padding">
+        <div class="col mission-col" style="margin-left:  0%;width: 100%;">
+          <h3>Our Misson</h3>
+<p>
+    Our goal is to provide a haven in which the community can gather for wholesome social interactions to ultimately promote the Sikh religion. In all aspects of Sikhism including: teaching, language, music, and the philosophies of The Sikh Gurus.
+</p>
+        </div>
+       
+     
+        <div class="col" style="margin-left: 0%;">
+          <h3>Contact Us</h3>
+          <div class="flex contact-footer">
+            <div>
+              
+            </div>
+            <div class="contact-text" >
+              <h4 style="margin-left: 25%;">Head Office</h4>
+              <h5 style="margin-left: 23%;">CHANDIGARH </h5>
+              <h4 style="margin-left: 25%;margin-top: 10%;">CONTACT</h4>
+              <h5 style="margin-left: 18%;font-size: 1.5rem;">+91 6239001726 </h5>
+            </div>
+            
+          </div>
+</div>
+          
+      
+          <div class="cont" style="margin-top: 10%;margin-left: 20%;">
+            <H4 style="color:rgb(24, 209, 18);margin-left: 25%;">E MAIL</H4>
+            <h5 style="margin-left: 10%;">gsstrustchd@gmail.com</h5>
+          </div>    
+    </section>
+
+  </main>
+  <footer class="footer text-center">
+    <p>Copyright  © 2024 By Ammy Singh
+    </p>
+  </footer>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/f4ce9ea80b.js" crossorigin="anonymous"></script>   
+

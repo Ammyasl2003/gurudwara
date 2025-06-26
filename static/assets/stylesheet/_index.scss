@@ -1,0 +1,101 @@
+  .box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .col {
+      padding: 80px 40px;
+      font-weight: 200;
+      font-size: 0.75rem;
+      text-align: justify;
+    }
+    .col-1 {
+      background-color: rgb(224, 77, 57);
+      color: white;
+    }
+    .col-2 {
+      background-color: #313131;
+      color: white;
+    }
+    .col-3 {
+    background-color: rgb(245, 183, 60);
+    color: black;
+    }
+    .read-more-btn {
+    background-color: white;
+    }
+    .read-more-btn a {
+    color: black;
+    }
+    p {
+      padding: 20px 0;
+    }
+  }  
+  
+  // counting 
+  
+  .fact-counter-sec {
+    background-color: rgb(158, 158, 158);
+  }
+  
+  .fact-container {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 10px 10px 10px;
+  }
+  
+  .fact-count-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 0;
+    .col {
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .col1 {
+      background-color:rgb(224, 223, 223);
+    }
+    .col2 {
+      background-color: #ffffff;
+    }
+    img {
+      height: 70px;
+      width: 70px;
+      margin-bottom: 20px;
+    }
+    p {
+      padding-top: 20px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  // Become a Volunteer Section 
+  
+  .become-volunteer-sec {
+    background-image: url(./media/img1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white; 
+    p {
+      padding: 24px;
+      font-size: 1.2rem;
+    }
+    .btn {
+      border-radius: 5px;
+    }
+    .btn a {
+      color: black;
+    }
+  }
+  
+@media all and (max-width: 900px) {
+    .box-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+    .fact-count-row {
+        grid-template-columns: 1fr;
+    }
+    h4 {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+}   
